@@ -6,8 +6,8 @@
 
 <% @place.entries.order(posted_on: :desc).each do |entry| %>
   <div>
-    <h4 style="color: blue;"><%= entry.title %></h4>
-    <p><%= entry.posted_on.strftime("%B %d, %Y") %></p>
+    <h4><%= entry.title %></h4>
+    <p><small style="font-style: italic;"><%= entry.posted_on.strftime("%B %d, %Y") %></small></p> <!--Worked with GPT to get formatting perfect here-->
     <p><%= entry.description %></p>
   </div>
 <% end %>
