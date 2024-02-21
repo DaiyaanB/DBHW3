@@ -1,4 +1,4 @@
-class PlacesController < ApplicationController #Built with the help of GPT 4.0 based on class lecture notes and HW goals for user stories
+class PlacesController < ApplicationController #Built with the help of GPT 4.0 based on my class lecture notes and HW goals for user stories
   
   def index
     @places = Place.all
