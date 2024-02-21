@@ -1,8 +1,6 @@
-Rails.application.routes.draw do
-  get 'places/index'
-  get 'places/show'
-  get 'places/new'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :places #Route for places controller
+Rails.application.routes.draw do #Worked with GPT to figure out the 'nesting' needed for Part II
   root 'places#index'
+  resources :places do
+    resources :entries, only: [:new, :create]
+  end
 end
