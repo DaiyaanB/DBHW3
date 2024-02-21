@@ -1,5 +1,5 @@
 <!--Lists places and links to each places show page and the new place form Made with help of GPT based on my notes and assignment detail-->
-<h1>Places</h1> 
+<h1 style="color: blue;">Places I've Been</h1> 
 <ul>
   <% @places.each do |place| %>
     <li><%= link_to place.name, place_path(place) %></li>
