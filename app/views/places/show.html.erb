@@ -4,13 +4,14 @@
 <h2 style="color: blue;"><%= @place.name %></h2>
 
 
-<% @place.entries.each do |entry| %>
+<% @place.entries.order(posted_on: :desc).each do |entry| %>
   <div>
-    <h4><%= entry.title %></h4>
+    <h4 style="color: blue;"><%= entry.title %></h4>
     <p><%= entry.posted_on.strftime("%B %d, %Y") %></p>
     <p><%= entry.description %></p>
   </div>
 <% end %>
+
 
 
 <h4>Options:</h4>
