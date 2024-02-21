@@ -1,2 +1,17 @@
-<h1>Entries#new</h1>
-<p>Find me in app/views/entries/new.html.erb</p>
+<!--Lists entries Made with help of GPT based on my notes and assignment detail-->
+
+<%= form_for([@place, @entry]) do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :posted_on %><br>
+    <%= f.date_select :posted_on %>
+  </p>
+  <%= f.submit "Save Entry" %>
+<% end %>

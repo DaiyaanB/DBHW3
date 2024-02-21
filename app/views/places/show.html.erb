@@ -1,5 +1,17 @@
 <!--Display place name and link back to places list.
  Made with help of GPT based on my notes and assignment detail-->
 
-<h1><%= @place.name %></h1>
+<h2><%= @place.name %></h2>
+
 <%= link_to 'Back to Places', places_path %>
+<%= link_to 'Add New Entry', new_place_entry_path(@place) %>
+
+<h3>Entries:</h3>
+<% @place.entries.each do |entry| %>
+  <div>
+    <h4><%= entry.title %></h4>
+    <p><%= entry.description %></p>
+    <p>Posted on: <%= entry.posted_on.strftime("%B %d, %Y") %></p>
+  </div>
+<% end %>
+
